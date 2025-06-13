@@ -1,4 +1,4 @@
-
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +14,7 @@ body, html {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -28,6 +29,7 @@ body, html {
   backdrop-filter: blur(15px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .title {
@@ -71,6 +73,33 @@ body, html {
   background-color: #008ecc;
 }
 
+/* Toggle Buttons */
+.toggles {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 1rem 0 1.5rem;
+}
+
+.toggles button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.toggles button:hover {
+  background: linear-gradient(135deg, #0072ff, #004d99);
+  transform: scale(1.05);
+}
+
+/* Weather Info */
 .weather-info {
   opacity: 0;
   transform: translateY(20px);
@@ -104,6 +133,58 @@ body, html {
   margin-top: 1rem;
 }
 
+/* Light Theme */
+body.light-theme {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #222;
+}
+
+body.light-theme .weather-app {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  color: #222;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+body.light-theme .title {
+  color: #0077cc;
+}
+
+body.light-theme .subtitle {
+  color: #555;
+}
+
+body.light-theme .weather-info h2 {
+  color: #444;
+}
+
+body.light-theme .weather-info p {
+  color: #222;
+}
+
+body.light-theme .search input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #222;
+}
+
+body.light-theme .search button,
+body.light-theme .toggles button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+}
+
+body.light-theme .search button:hover,
+body.light-theme .toggles button:hover {
+  background-color: #005fa3;
+}
+
+body.light-theme .error-message {
+  color: #c00;
+}
+
+/* Animations */
 @keyframes slideUp {
   to {
     opacity: 1;

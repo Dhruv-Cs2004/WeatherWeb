@@ -14,13 +14,18 @@
     <section class="weather-app">
       <h1 class="title">WeatherNow</h1>
       <p class="subtitle">Get real-time weather updates</p>
-      
+
       <div class="search">
         <input type="text" id="cityInput" placeholder="Search city..." aria-label="City Name" />
         <button id="searchBtn" aria-label="Search Weather">Search</button>
       </div>
 
-            <div id="weatherResult" class="weather-info hidden" aria-live="polite"></div>
+      <div class="toggles">
+        <button id="unitToggle">🌡️ °C / °F</button>
+        <button id="themeToggle">🌓 Theme</button>
+      </div>
+
+      <div id="weatherResult" class="weather-info hidden" aria-live="polite"></div>
 
       <p id="error" class="error-message" role="alert"></p>
     </section>
