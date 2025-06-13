@@ -1,4 +1,4 @@
-/* Base Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -73,7 +73,7 @@ body, html {
   background-color: #008ecc;
 }
 
-/* Toggle Buttons */
+
 .toggles {
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Weather Info */
+
 .weather-info {
   opacity: 0;
   transform: translateY(20px);
@@ -115,6 +115,7 @@ body, html {
   width: 80px;
   animation: float 2s infinite ease-in-out;
   margin: 0.5rem 0;
+  
 }
 
 .weather-info h2 {
@@ -133,7 +134,7 @@ body, html {
   margin-top: 1rem;
 }
 
-/* Light Theme */
+
 body.light-theme {
   background: linear-gradient(to right, #fdfbfb, #ebedee);
   color: #222;
@@ -184,7 +185,7 @@ body.light-theme .error-message {
   color: #c00;
 }
 
-/* Animations */
+
 @keyframes slideUp {
   to {
     opacity: 1;
